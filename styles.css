@@ -1,0 +1,113 @@
+
+/*
+    #3F2225
+    #CE807F
+    #9B9B9B
+    #918594
+	#f7dcd5
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap');
+
+html {
+	--jon: #3F2225;
+	--pink: #CE807F;
+	--gray: #9B9B9B;
+	--purple: #918594;
+	--black: #171616;
+	--white: #f7dcd5;
+}
+
+body {
+	margin: 0px;
+	height: 100vh;
+	/* background-color: var(--black); */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--white);
+	background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5) ), url("images/wallpaper.jpg");
+	background-size: cover;
+	zindex: -5;
+}
+
+.content {
+	zindex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+	font-size: 2.5rem;
+	margin: 1rem 0px;
+	text-shadow: 0px 5px 25px rgba(0, 0, 0, 0.75);
+	font-weight: 300;
+}
+
+.content input {
+	width: 600px;
+	height: 2rem;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	margin: 1rem 0px;
+
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.35rem;
+
+	transition: box-shadow .5s cubic-bezier(.06,.78,.53,.97);
+}
+
+.content input:focus {
+	outline: none;
+	box-shadow: 0px 0px 10px 2.5px var(--pink);
+}
+
+.shortcuts {
+	margin: 1rem 0px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.shortcuts div {
+	color: var(--white);
+	border-radius: 5px;
+	background-color: var(--jon);
+	padding: 0.5rem;
+	margin: 5px;
+	width: 150px;
+	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.shortcuts h1 {
+	font-size: 1.3rem;
+	margin: 10px 0px;
+}
+
+.shortcuts ul {
+	margin: 10px 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.shortcuts li {
+	margin: 10px 0px;
+}
+
+.shortcuts a {
+	outline: none;
+	text-decoration: none;
+	color: var(--white);
+	transition: color .25s;
+}
+
+.shortcuts a:hover {
+	color: var(--purple);
+}
+
+.shortcuts a:focus {
+	color: var(--purple);
+}
