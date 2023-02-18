@@ -9,7 +9,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap');
 
-html {
+:root {
 	--jon: #3F2225;
 	--pink: #CE807F;
 	--gray: #9B9B9B;
