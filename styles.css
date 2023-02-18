@@ -47,22 +47,53 @@ body {
 	font-weight: 300;
 }
 
-.content input {
-	width: 600px;
-	height: 2rem;
-	border-radius: 5px;
-	border: none;
-	padding: 5px;
+.search {
+	position: relative;
 	margin: 1rem 0px;
-
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.35rem;
-
-	transition: box-shadow .5s cubic-bezier(.06,.78,.53,.97);
+	border-radius: 5px;
+	padding: 5px;
+	background-color: var(--white);
 }
 
-.content input:focus {
+.search #link-alert {
+	position: absolute;
+	margin: 0;
+	left: 100%;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	transition: transform .25s, opacity .25s;
+	color: var(--pink);
+}
+
+.search > div {
+	transform: none;
+	opacity: 0;
+}
+
+.search > .active {
+	transform: translateX(-40px);
+	opacity: 1;
+}
+
+.search input {
+	width: 600px;
+	border: none;
+	background: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.35rem;
+	color: var(--black);
+
+	transition: box-shadow .5s cubic-bezier(.06,.78,.53,.97);
+	display: inline;
+}
+
+.search input:focus {
 	outline: none;
+}
+
+.search:focus-within {
 	box-shadow: 0px 0px 10px 2.5px var(--pink);
 }
 
@@ -75,6 +106,9 @@ body {
 .shortcuts div {
 	color: var(--white);
 	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--white);
 	background-color: var(--jon);
 	padding: 0.5rem;
 	margin: 5px;
@@ -83,6 +117,8 @@ body {
 }
 
 .shortcuts h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
 	font-size: 1.3rem;
 	margin: 10px 0px;
 }
@@ -98,6 +134,8 @@ body {
 }
 
 .shortcuts a {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
 	outline: none;
 	text-decoration: none;
 	color: var(--white);
