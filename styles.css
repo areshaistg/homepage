@@ -21,7 +21,7 @@
 body {
 	margin: 0px;
 	height: 100vh;
-	/* background-color: var(--black); */
+	background-color: var(--black);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -38,11 +38,43 @@ body {
 }
 
 .title {
+	position: relative;
 	margin: 0;
 	font-size: 2.5rem;
 	margin: 1rem 0px;
 	text-shadow: 0px 5px 25px rgba(0, 0, 0, 0.75);
 	font-weight: 300;
+	animation: titlePopAnimation .5s;
+	animation-fill-mode: forwards;
+}
+
+.title-char {
+	display: inline-block;
+	position: relative;
+	transform: translateY(20px);
+	opacity: 0;
+	animation: charPopAnimation .5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes titlePopAnimation {
+	0% {
+		transform: none;
+	}
+	100% {
+		transform: scale(120%);
+	}
+}
+
+@keyframes charPopAnimation {
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 .search {
@@ -138,7 +170,6 @@ body {
 	opacity: 1;
 }
 
-
 .shortcuts h1 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
@@ -172,3 +203,4 @@ body {
 .shortcuts a:focus {
 	color: var(--purple);
 }
+
