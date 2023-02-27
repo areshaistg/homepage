@@ -27,6 +27,8 @@ function search() {
 		if (url === false) {
 			if (looksLikeALink(query)) {
 				window.location.href = "https://" + query;
+			} else if (query.startsWith("localhost:")) {
+				window.location.href = "http://" + query;
 			} else {
 				let modif = query.replace(/\s+/g, '+');
 				window.location.href = "https://google.com/search?q=" + modif;
