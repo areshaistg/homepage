@@ -27,7 +27,7 @@ body {
 	justify-content: center;
 	font-family: 'Montserrat', sans-serif;
 	color: var(--white);
-	background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5) ), url("images/wallpaper.jpg");
+	background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url("images/wallpaper.png");
 	background-size: cover;
 }
 
@@ -147,29 +147,6 @@ body {
 	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
 }
 
-.shortcuts div::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	border-radius: inherit;
-	background: radial-gradient(
-		circle at center,
-		rgba(255, 255, 255, 0),
-		rgba(0, 0, 0, 0.1)
-	);
-	transition: opacity .25s;
-	z-index: 2;
-	opacity: 0;
-}
-
-.shortcuts div:hover::before,
-.shortcuts div:focus-within::before{
-	opacity: 1;
-}
-
 .shortcuts h1 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
@@ -187,13 +164,15 @@ body {
 	margin: 10px 0px;
 }
 
-.shortcuts a {
+.shortcuts li a {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	outline: none;
 	text-decoration: none;
 	color: var(--white);
 	transition: color .25s;
+	cursor: pointer;
+	z-index: 5;
 }
 
 .shortcuts a:hover {
